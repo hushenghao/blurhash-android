@@ -34,7 +34,7 @@ android {
     }
 }
 
-version = "1.0.0"
+version = "1.0.1"
 group = "io.github.hushenghao"
 String artifactName = "blurhash-android"
 
@@ -97,7 +97,6 @@ afterEvaluate {
                 artifactId = artifactName
 
                 pom {
-                    packaging 'aar'
                     name = 'Blurhash Android'
                     description = 'Kotlin extensions of Blurhash for ImageView'
                     url = 'https://github.com/hushenghao/blurhash-android'

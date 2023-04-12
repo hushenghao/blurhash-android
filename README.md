@@ -6,6 +6,19 @@ To find out more about Blurhash, see https://github.com/woltapp/blurhash.
 
 ## Usage
 
+### Add the library to a project
+```groovy
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "io.github.hushenghao:blurhash-android:1.0.1"
+}
+```
+
+### Samples
+
 ```kotlin
 // Example hash
 private const val BLUR_HASH = "LVPO*{9docS\$}Nn4R.oy\$]\${n\$bI"
