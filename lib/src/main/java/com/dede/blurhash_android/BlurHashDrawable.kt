@@ -28,11 +28,11 @@ class BlurHashDrawable(
     private var bitmap: Bitmap? = null
 
     override fun getIntrinsicHeight(): Int {
-        return bitmap?.height ?: SIZE_UNDEFINED
+        return bitmap?.height ?: targetHeight
     }
 
     override fun getIntrinsicWidth(): Int {
-        return bitmap?.width ?: SIZE_UNDEFINED
+        return bitmap?.width ?: targetWidth
     }
 
     override fun onBoundsChange(bounds: Rect) {
@@ -53,6 +53,7 @@ class BlurHashDrawable(
             }
         }
         this.bitmap = BlurHashDecoder.decode(blurHash, width, height)
+        invalidateSelf()
     }
 
     override fun draw(canvas: Canvas) {
